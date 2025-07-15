@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ need['title'] }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-4">{{ need['title'] }}</h1>
+    <p>{{ need['description'] }}</p>
+    <p>Goal: ${{ need['goal'] }}</p>
+    <a href="{{ url_for('make_donation', need_id=need['id']) }}" class="btn btn-success">Make Donation</a>
+    <a href="{{ url_for('category_needs', category_id=need['category_id']) }}" class="btn btn-secondary">Back to Needs</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Categories</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-4">Categories</h1>
+    <div class="list-group mt-3">
+        {% for category in categories %}
+            <a href="{{ url_for('category_needs', category_id=category['id']) }}" class="list-group-item list-group-item-action">
+                {{ category['name'] }}
+            </a>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>
